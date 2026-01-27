@@ -1,7 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+
+  const handleSend = () => {
+    if (!email) {
+      alert("Please enter your email address");
+      return;
+    }
+
+    navigate("/reset-link-sent");
+  };
 
   return (
     <>
@@ -93,13 +104,16 @@ const ForgotPassword = () => {
 
             <div className="input-box">
               ✉
-              <input type="email" placeholder="john@example.com" />
+              <input
+                type="email"
+                placeholder="john@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyDown={(e) => { if (e.key === 'Enter') handleSend(); }}
+              />
             </div>
 
-            <button
-              className="reset-btn"
-              onClick={() => navigate("/reset-link-sent")}
-            >
+            <button className="reset-btn" onClick={handleSend}>
               Send Reset Link
             </button>
           </div>

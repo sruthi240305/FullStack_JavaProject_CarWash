@@ -127,21 +127,35 @@ const ProfilePanel = ({ open, onClose }) => {
             Edit Profile
           </li>
 
-         <li onClick={() => navigate("/my-vehicles")}>
-  <img src={vehicleIcon} alt="" />
-  My Vehicles
-</li>
+          <li
+            onClick={() => {
+              navigate("/my-vehicles");
+              onClose();
+            }}
+          >
+            <img src={vehicleIcon} alt="" />
+            My Vehicles
+          </li>
 
-
-          <li>
+          <li
+            onClick={() => {
+              navigate("/payment-methods");
+              onClose();
+            }}
+          >
             <img src={paymentIcon} alt="Payment Method" />
             Payment Method
           </li>
 
-        <li onClick={() => navigate("/settings")}>
-        <img src={settingsIcon} alt="" />
-          Settings
-        </li>
+          <li
+            onClick={() => {
+              navigate("/settings");
+              onClose();
+            }}
+          >
+            <img src={settingsIcon} alt="" />
+            Settings
+          </li>
 
         </ul>
 

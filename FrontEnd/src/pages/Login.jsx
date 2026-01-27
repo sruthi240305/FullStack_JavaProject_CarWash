@@ -10,15 +10,15 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (
-      email === "dhaksitarajendran@gmail.com" &&
-      password === "karpagam"
-    ) {
-      navigate("/employee-dashboard");
-    } else {
-      navigate("/dashboard");
-    }
-  };
+  if (email === "dhaksitarajendran@gmail.com" && password === "karpagam") {
+    navigate("/employee-dashboard");
+  } else if (email && password) {
+    navigate("/dashboard");
+  } else {
+    alert("Invalid credentials");
+  }
+};
+
 
   return (
     <>
@@ -55,7 +55,7 @@ export default function Login() {
               Remember Me
             </label>
 
-            <Link to="#" className="forgot">
+            <Link to="/forgot-password" className="forgot">
               Forgot password?
             </Link>
           </div>

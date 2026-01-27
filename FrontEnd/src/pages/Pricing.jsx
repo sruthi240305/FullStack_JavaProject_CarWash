@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Pricing() {
   const plans = [
     {
@@ -75,7 +76,7 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <button>Book Now</button>
+              <Link to="/booknow" className="book-now-btn">Book Now</Link>
             </div>
           ))}
         </div>
@@ -168,7 +169,7 @@ export default function Pricing() {
           font-size: 14px;
         }
 
-        button {
+       .book-now-btn{
           background: #7b1e2b;
           border: none;
           padding: 12px 30px;
@@ -176,15 +177,16 @@ export default function Pricing() {
           color: white;
           font-size: 15px;
           cursor: pointer;
+          text-decoration: none;
         }
 
-        .price-card:not(.popular) button {
+        .price-card:not(.popular) button-now-btn {
           background: transparent;
           border: 2px solid #7b1e2b;
           color: #7b1e2b;
         }
 
-        button:hover {
+        button-now-btn:hover {
           opacity: 0.9;
         }
       `}</style>

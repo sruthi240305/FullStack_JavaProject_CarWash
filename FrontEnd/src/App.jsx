@@ -17,6 +17,12 @@ import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetLinkSent from "./pages/ResetLinkSent";
+import MyVehicles from "./pages/MyVehicles";
+import PaymentMethods from "./pages/PaymentMethod";
+import EditCard from "./pages/EditCard";
+import Settings from "./components/settings";
+import EditProfile from "./pages/EditProfile";
+import AddCard from "./pages/AddCard";
 
 function AppContent() {
   const location = useLocation();
@@ -40,6 +46,12 @@ function AppContent() {
         <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/my-vehicles" element={<MyVehicles />} />
+        <Route path="/payment-methods" element={<PaymentMethods />} />
+        <Route path="/edit-card" element={<EditCard />} />
+        <Route path="/add-card" element={<AddCard />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-link-sent" element={<ResetLinkSent />} />
         <Route path="/login" element={<Login />} />

@@ -18,7 +18,6 @@ import Dashboard from "./pages/Dashboard";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetLinkSent from "./pages/ResetLinkSent";
 
-
 function AppContent() {
   const location = useLocation();
   const isDashboardRoute = location.pathname === "/dashboard";
@@ -43,11 +42,11 @@ function AppContent() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-link-sent" element={<ResetLinkSent />} />
+        <Route path="/login" element={<Login />} />
 
       </Routes>
     </>
-  );
-}
+  );}
 
 export default function App() {
   return (

@@ -20,8 +20,12 @@ const Confirmation = () => {
         </p>
 
         <div style={styles.buttons}>
-          <button style={styles.back}>Back to Home</button>
-          <button style={styles.book}>Book Another</button>
+          <Link to="/" style={styles.back}>
+                      Back to Home
+                    </Link>
+         <Link to="/booknow" style={styles.book}>
+                     Book Another
+                    </Link>
         </div>
       </div>
     </div>
@@ -102,6 +106,7 @@ const styles = {
     borderRadius: "25px",
     fontWeight: "bold",
     cursor: "pointer",
+    textDecoration: "none",
   },
 
   book: {
@@ -112,5 +117,6 @@ const styles = {
     borderRadius: "25px",
     fontWeight: "bold",
     cursor: "pointer",
+    textDecoration: "none",
   },
 };

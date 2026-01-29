@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
-import Dashboardheader from "./pages/DashboardHeader";
+import Dashboardheader from "./components/DashboardHeader";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
@@ -19,10 +19,15 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetLinkSent from "./pages/ResetLinkSent";
 import MyVehicles from "./pages/MyVehicles";
 import PaymentMethods from "./pages/PaymentMethod";
-import EditCard from "./pages/EditCard";
+import EditCard from "./pages/Employee/EditCard";
 import Settings from "./components/settings";
 import EditProfile from "./pages/EditProfile";
 import AddCard from "./pages/AddCard";
+import EmployeeDashboard from "./pages/Employee/EmployeeDashboard";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import EmployeeImpact from "./pages/Employee/EmployeeImpact";
+import EmployeeTask from "./pages/Employee/EmployeeTask";
+
 
 function AppContent() {
   const location = useLocation();
@@ -54,7 +59,14 @@ function AppContent() {
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-link-sent" element={<ResetLinkSent />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+        <Route path="/employee-impact" element={<EmployeeImpact />} />
+        <Route path="/editprofile" element={<EditProfile />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/employee-task" element={<EmployeeTask />} />
+      
 
       </Routes>
     </>

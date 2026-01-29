@@ -10,14 +10,24 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-  if (email === "dhaksitarajendran@gmail.com" && password === "karpagam") {
-    navigate("/employee-dashboard");
-  } else if (email && password) {
-    navigate("/dashboard");
-  } else {
+    if (email === "dhaksita38@gmail.com" && password === "12345") {
+      localStorage.setItem("adminAuth", "true");
+      navigate("/admin-dashboard");
+      return;
+    }
+
+    if (email === "dhaksitarajendran@gmail.com" && password === "karpagam") {
+      navigate("/employee-dashboard");
+      return;
+    }
+
+    if (email && password) {
+      navigate("/dashboard");
+      return;
+    }
+
     alert("Invalid credentials");
-  }
-};
+  };
 
 
   return (

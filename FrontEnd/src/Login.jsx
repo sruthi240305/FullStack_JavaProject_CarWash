@@ -43,7 +43,7 @@ function Login() {
           role: response.role
         }));
         
-        // Redirect to home or dashboard
+
         window.location.href = '/';
       } else {
         setError(response.message || 'An error occurred');

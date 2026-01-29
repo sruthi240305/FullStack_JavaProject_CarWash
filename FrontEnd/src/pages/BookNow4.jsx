@@ -199,6 +199,7 @@ const styles = {
     borderRadius: "25px",
     fontWeight: "bold",
     cursor: "pointer",
+    textDecoration: "none",
   },
 
   confirmBtn: {
@@ -209,5 +210,6 @@ const styles = {
     borderRadius: "25px",
     fontWeight: "bold",
     cursor: "pointer",
+    textDecoration: "none",
   },
 };

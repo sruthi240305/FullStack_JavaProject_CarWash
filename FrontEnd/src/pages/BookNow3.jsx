@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const BookNow3 = () => {
+  const navigate = useNavigate();
   return (
     <div style={styles.page}>
       <h1 style={styles.title}>Book Your Appointment</h1>
@@ -38,7 +40,7 @@ const BookNow3 = () => {
         </div>
 
         <div style={styles.buttons}>
-          <button style={styles.backBtn}>Back</button>
+         <button  style={styles.backBtn}onClick={() => navigate("/booknow")}>Back</button>
          
 <Link to="/booknow4" style={{ textDecoration: "none" }}>
   <button style={styles.continueBtn}>
